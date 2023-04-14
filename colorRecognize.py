@@ -2,12 +2,12 @@ import cv2
 import numpy as np
 
 # Load image
-img = cv2.imread('b2.jpg')
+img = cv2.imread('/home/nvidia/project/term-bg-1-3d6355ab.jpeg')
 
 # Resize image to reduce processing time
 img = cv2.resize(img, (640, 480))
 
-# Convert image to HSV color 
+# Convert image to HSV color space
 hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
 # Define range of colors to detect (here, we detect red)
@@ -27,3 +27,4 @@ if red_percentage > 5:
     print("The dominant color in the image is red.")
 else:
     print("The dominant color in the image is not red.")
+
